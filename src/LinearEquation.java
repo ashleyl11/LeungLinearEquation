@@ -106,7 +106,7 @@ public class LinearEquation {
     /* Returns a String of the coordinate point on the line that has the given x value, with
        both x and y coordinates as decimals to the nearest hundredth, e.g (-5.0, 6.75) */
     public String coordinateForX(double xValue){
-        return "(" + roundedToHundredth(xValue) + "," + roundedToHundredth(slope()*xValue + yIntercept()) + ")";
+        return "(" + roundedToHundredth(xValue) + ", " + roundedToHundredth(slope()*xValue + yIntercept()) + ")";
     }
 
 
@@ -137,18 +137,11 @@ public class LinearEquation {
 
       */
     public String lineInfo(){
-        if (x1 == x2){
-            return "These points are on a vertical line: x=" + x1;
-        } else {
-            String coord1 = "(" + x1 + ", " + y1 + ")";
-            String coord2 = "(" + x2 + ", " + y2 + ")";
-            return "The two points are: " + coord1 + " and " + coord2 + "\n" + "The equation of the line between these points is: " + equation() + "\n" + "The slope of this line is: " + slope() + "\n" +  "The y-intercept of this line is: " + yIntercept() + "\n" + "The distance between the two points is: " + distance();
-        }
+        String coord1 = "(" + x1 + ", " + y1 + ")";
+        String coord2 = "(" + x2 + ", " + y2 + ")";
+        return "The two points are: " + coord1 + " and " + coord2 + "\n" + "The equation of the line between these points is: " + equation() + "\n" + "The slope of this line is: " + slope() + "\n" +  "The y-intercept of this line is: " + yIntercept() + "\n" + "The distance between the two points is: " + distance();
     }
 
-    public String start(){
-        return "Welcome!";
-    }
 
 
 
